@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Nostro Spazio ✨</title>
     <style>
-        /* Stili Generali */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcedf2; /* Un rosa/crema molto soft */
+            background-color: #fcedf2; /* Sfondo rosa/crema soft */
             color: #4a4a4a;
             margin: 0;
             padding: 0;
@@ -27,7 +26,7 @@
 
         header h1 {
             margin: 0;
-            color: #d81b60; /* Colore romantico ma moderno */
+            color: #d81b60;
             font-size: 2.5rem;
         }
 
@@ -39,75 +38,35 @@
 
         .container {
             max-width: 1000px;
-            width: 90%;
+            width: 95%;
             margin: 30px auto;
+            text-align: center;
         }
 
         h2 {
             color: #d81b60;
             border-bottom: 2px solid #f48fb1;
             padding-bottom: 8px;
-            margin-top: 40px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1.5rem;
         }
 
-        /* Griglia per le Foto */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            transition: transform 0.2s;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
-
-        .gallery-item img {
+        /* Contenitore reattivo per la galleria incorporata */
+        .drive-gallery-container {
             width: 100%;
-            height: 250px;
-            object-fit: cover; /* Taglia le foto in modo che siano tutte uguali e armoniose */
-            border-radius: 8px;
-        }
-
-        .gallery-item p {
-            text-align: center;
-            font-size: 0.9rem;
-            margin: 10px 0 5px 0;
-            color: #555;
-        }
-
-        /* Sezione Video */
-        .video-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-        }
-
-        .video-item {
+            height: 650px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
             background: white;
-            padding: 12px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-top: 20px;
         }
 
-        .video-item video {
+        .drive-embed {
             width: 100%;
-            border-radius: 8px;
-            outline: none;
-        }
-
-        .video-item p {
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            color: #555;
+            height: 100%;
+            border: none;
         }
 
         footer {
@@ -123,54 +82,22 @@
 <body>
 
     <header>
-        <!-- Puoi cambiare i nomi qui sotto -->
         <h1>Il Nostro Posto Speciale 🤍</h1>
-        <p>Uno spazio tutto nostro, aggiornato da entrambi ogni volta che vogliamo custodire un ricordo.</p>
+        <p>I nostri ricordi, protetti in un angolo di web tutto nostro. Sincronizzato in tempo reale.</p>
     </header>
 
     <div class="container">
 
-        <!-- SEZIONE FOTO -->
-        <h2>I Nostri Momenti (Foto) 📸</h2>
-        <div class="gallery">
-            
-            <!-- Foto 1 -->
-            <div class="gallery-item">
-                <img src="foto1.jpg" alt="Il nostro primo appuntamento">
-                <p>Il nostro primo appuntamento insieme! 🍕</p>
-            </div>
-
-            <!-- Foto 2 -->
-            <div class="gallery-item">
-                <img src="foto2.jpg" alt="Al mare">
-                <p>Quella volta pazzesca al mare 🌊</p>
-            </div>
-
-            <!-- Potete copiare e incollare il blocco "gallery-item" qui sotto per aggiungere infinite foto -->
-
-        </div>
-
-        <!-- SEZIONE VIDEO -->
-        <h2>I Nostri Ricordi in Movimento 🎥</h2>
-        <div class="video-section">
-
-            <!-- Video 1 -->
-            <div class="video-item">
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Il tuo browser non supporta i video.
-                </video>
-                <p>I festeggiamenti di Capodanno 🎉</p>
-            </div>
-
-            <!-- Potete copiare e incollare il blocco "video-item" qui sotto per aggiungere altri video -->
-
+        <h2>La Nostra Galleria di Foto e Video 📸 ✨</h2>
+        
+        <div class="drive-gallery-container">
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1hNs9u4TS4IkxRo2a8R86igsr92o13LY2#grid" class="drive-embed" allow="autoplay"></iframe>
         </div>
 
     </div>
 
     <footer>
-        <p>Creato con il cuore. Aggiornabile da Noi Due. ✨</p>
+        <p>Creato con il cuore. Trascina le foto su Drive per vederle qui. ✨</p>
     </footer>
 
 </body>
